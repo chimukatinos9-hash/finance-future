@@ -1,33 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Finance Future</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#0b1220;
-            color:white;
-            text-align:center;
-            padding:50px;
-        }
-        h1{
-            color:#38bdf8;
-        }
-        .card{
-            max-width:700px;
-            margin:auto;
-            background:#111827;
-            padding:30px;
-            border-radius:20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Future</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#111;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#f4b400;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+font-size:20px;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.btn{
+padding:15px 30px;
+background:#f4b400;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+.features{
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#151515;
+padding:30px;
+border-radius:15px;
+}
+
+.card h3{
+color:#f4b400;
+margin-bottom:15px;
+}
+
+.community{
+padding:80px 10%;
+text-align:center;
+}
+
+.community h2{
+margin-bottom:30px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#111;
+margin-top:50px;
+}
+</style>
 </head>
+
 <body>
-    <div class="card">
-        <h1>🚀 Finance Future</h1>
-        <p>The future of business, learning, communication and digital commerce.</p>
-        <p>Your platform is officially under construction.</p>
-    </div>
+
+<header>
+<div class="logo">Finance Future</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Academy</a>
+<a href="#">Marketplace</a>
+<a href="#">Community</a>
+<a href="#">Login</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>Learn. Build. Trade. Connect.</h1>
+
+<p>
+Finance Future combines the power of business education,
+global communication, entrepreneurship, trading knowledge,
+digital commerce and community growth into one platform.
+</p>
+
+<a href="#" class="btn">Get Started</a>
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<h3>🎓 Academy</h3>
+<p>Marketing, Business, Trading and Computer Science courses.</p>
+</div>
+
+<div class="card">
+<h3>💬 Communication</h3>
+<p>WhatsApp-inspired messaging and collaboration tools.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Communities</h3>
+<p>Discord-style channels for entrepreneurs and learners.</p>
+</div>
+
+<div class="card">
+<h3>💼 Marketplace</h3>
+<p>Buy and sell digital products, files and services.</p>
+</div>
+
+<div class="card">
+<h3>📈 Trading Hub</h3>
+<p>Learn investing, markets and financial growth.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Mentor</h3>
+<p>Future AI assistant for business, marketing and coding.</p>
+</div>
+
+</section>
+
+<section class="community">
+
+<h2>Finance Future Community</h2>
+
+<p>
+Join ambitious entrepreneurs, traders, developers,
+students and creators from around the world.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Finance Future. All rights reserved.</p>
+
+</footer>
+
 </body>
 </html>

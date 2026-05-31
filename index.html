@@ -6,6 +6,7 @@
 <title>Finance Future</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,6 +17,7 @@ font-family:Arial,sans-serif;
 body{
 background:#0a0a0a;
 color:white;
+overflow-x:hidden;
 }
 
 header{
@@ -26,6 +28,7 @@ padding:20px 10%;
 background:#111;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 .logo{
@@ -38,6 +41,7 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
+font-weight:bold;
 }
 
 .hero{
@@ -48,17 +52,19 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:linear-gradient(135deg,#0a0a0a,#111827);
 }
 
 .hero h1{
 font-size:60px;
 margin-bottom:20px;
+color:#f4b400;
 }
 
 .hero p{
-max-width:800px;
+max-width:850px;
 font-size:20px;
-line-height:1.6;
+line-height:1.8;
 margin-bottom:30px;
 }
 
@@ -68,25 +74,91 @@ background:#f4b400;
 color:black;
 text-decoration:none;
 font-weight:bold;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.about{
+padding:80px 10%;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
+
+.about h2{
+font-size:42px;
+margin-bottom:25px;
+color:#f4b400;
+}
+
+.about p{
+font-size:18px;
+line-height:1.9;
 }
 
 .features{
 padding:80px 10%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
 background:#151515;
 padding:30px;
-border-radius:15px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card h3{
-color:#f4b400;
 margin-bottom:15px;
+color:#f4b400;
+}
+
+.vision{
+padding:80px 10%;
+text-align:center;
+background:#101010;
+}
+
+.vision h2{
+color:#f4b400;
+margin-bottom:20px;
+font-size:40px;
+}
+
+.vision p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+.stats{
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.stat{
+background:#151515;
+padding:25px;
+border-radius:15px;
+}
+
+.stat h3{
+font-size:36px;
+color:#f4b400;
 }
 
 .community{
@@ -95,21 +167,36 @@ text-align:center;
 }
 
 .community h2{
-margin-bottom:30px;
+font-size:40px;
+color:#f4b400;
+margin-bottom:20px;
+}
+
+.community p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
 }
 
 footer{
-padding:40px;
+padding:50px;
 text-align:center;
 background:#111;
 margin-top:50px;
 }
+
+footer p{
+margin:10px 0;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">Finance Future</div>
 
 <nav>
@@ -117,8 +204,10 @@ margin-top:50px;
 <a href="#">Academy</a>
 <a href="#">Marketplace</a>
 <a href="#">Community</a>
+<a href="#">Investing</a>
 <a href="#">Login</a>
 </nav>
+
 </header>
 
 <section class="hero">
@@ -126,12 +215,45 @@ margin-top:50px;
 <h1>Learn. Build. Trade. Connect.</h1>
 
 <p>
-Finance Future combines the power of business education,
-global communication, entrepreneurship, trading knowledge,
-digital commerce and community growth into one platform.
+Finance Future is a next-generation platform that combines
+entrepreneurship, finance, investing, trading, technology,
+communication, learning, collaboration and digital commerce
+into one powerful ecosystem.
 </p>
 
 <a href="#" class="btn">Get Started</a>
+
+</section>
+
+<section class="about">
+
+<h2>About Finance Future</h2>
+
+<p>
+
+Finance Future is a global platform designed to help
+individuals, entrepreneurs, students, professionals,
+creators and businesses transform knowledge into
+opportunity.
+
+Our mission is to connect learning, communication,
+entrepreneurship, finance, technology and digital commerce
+within a single ecosystem.
+
+Whether you want to learn marketing, master business
+strategy, understand investing, explore trading, develop
+computer science skills, build a startup, collaborate with
+teams or sell digital products, Finance Future provides
+the tools and community to help you grow.
+
+The platform combines advanced learning resources,
+professional networking, real-time communication,
+business communities, digital marketplaces and future
+AI-powered guidance.
+
+Learn. Build. Trade. Connect. Grow.
+
+</p>
 
 </section>
 
@@ -139,32 +261,88 @@ digital commerce and community growth into one platform.
 
 <div class="card">
 <h3>🎓 Academy</h3>
-<p>Marketing, Business, Trading and Computer Science courses.</p>
+<p>
+Business, Marketing, Entrepreneurship,
+Trading and Computer Science education.
+</p>
 </div>
 
 <div class="card">
 <h3>💬 Communication</h3>
-<p>WhatsApp-inspired messaging and collaboration tools.</p>
+<p>
+Fast messaging inspired by WhatsApp
+for teams, communities and businesses.
+</p>
 </div>
 
 <div class="card">
 <h3>🌐 Communities</h3>
-<p>Discord-style channels for entrepreneurs and learners.</p>
+<p>
+Discord-style channels for collaboration,
+learning and networking.
+</p>
 </div>
 
 <div class="card">
 <h3>💼 Marketplace</h3>
-<p>Buy and sell digital products, files and services.</p>
+<p>
+Buy and sell digital products,
+templates, files and services.
+</p>
 </div>
 
 <div class="card">
-<h3>📈 Trading Hub</h3>
-<p>Learn investing, markets and financial growth.</p>
+<h3>📈 Investing Hub</h3>
+<p>
+Learn investing, markets,
+wealth creation and finance.
+</p>
 </div>
 
 <div class="card">
 <h3>🤖 AI Mentor</h3>
-<p>Future AI assistant for business, marketing and coding.</p>
+<p>
+Future AI assistant for business,
+coding, productivity and growth.
+</p>
+</div>
+
+</section>
+
+<section class="vision">
+
+<h2>Our Vision</h2>
+
+<p>
+To become the world's leading platform for
+learning, entrepreneurship, collaboration,
+financial education and digital opportunity,
+helping millions of people unlock their
+potential and build meaningful futures.
+</p>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h3>100+</h3>
+<p>Future Courses</p>
+</div>
+
+<div class="stat">
+<h3>50+</h3>
+<p>Business Communities</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Global Connectivity</p>
+</div>
+
+<div class="stat">
+<h3>∞</h3>
+<p>Growth Potential</p>
 </div>
 
 </section>
@@ -174,15 +352,24 @@ digital commerce and community growth into one platform.
 <h2>Finance Future Community</h2>
 
 <p>
-Join ambitious entrepreneurs, traders, developers,
-students and creators from around the world.
+Join ambitious entrepreneurs, traders,
+developers, students, creators and
+professionals from around the world.
+
+Build relationships, learn new skills,
+discover opportunities and create
+your future together.
 </p>
 
 </section>
 
 <footer>
 
-<p>© 2026 Finance Future. All rights reserved.</p>
+<p>© 2026 Finance Future</p>
+
+<p>
+Business • Technology • Trading • Learning • Community
+</p>
 
 </footer>
 

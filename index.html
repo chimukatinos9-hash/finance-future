@@ -4,373 +4,957 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finance Future</title>
-
+<meta name="description" content="Finance Future is a global platform for entrepreneurship, business, investing, trading, technology, communication, learning, and digital commerce. Learn skills, build businesses, connect with opportunities, and grow your future.">
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-background:#0a0a0a;
-color:white;
-overflow-x:hidden;
+  background:
+    radial-gradient(circle at top left, rgba(244,180,0,0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(59,130,246,0.10), transparent 26%),
+    #0a0a0a;
+  color:#ffffff;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#111;
-position:sticky;
-top:0;
-z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 10%;
+  background:rgba(17,17,17,0.9);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
-color:#f4b400;
+  font-size:28px;
+  font-weight:800;
+  color:#f4b400;
+  letter-spacing:0.4px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
+  color:#e5e7eb;
+  font-weight:700;
+  font-size:14px;
+  opacity:0.92;
 }
 
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(135deg,#0a0a0a,#111827);
+nav a:hover{
+  color:#f4b400;
 }
 
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-color:#f4b400;
-}
-
-.hero p{
-max-width:850px;
-font-size:20px;
-line-height:1.8;
-margin-bottom:30px;
+.nav-actions{
+  display:flex;
+  gap:12px;
+  margin-left:18px;
 }
 
 .btn{
-padding:15px 30px;
-background:#f4b400;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:12px;
-transition:0.3s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 24px;
+  border-radius:14px;
+  font-weight:800;
+  transition:0.25s ease;
+  border:1px solid transparent;
 }
 
 .btn:hover{
-transform:scale(1.05);
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:#f4b400;
+  color:#111;
+}
+
+.btn-secondary{
+  background:transparent;
+  color:#fff;
+  border-color:rgba(255,255,255,0.16);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+.hero{
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:90px 20px 70px;
+  background:linear-gradient(180deg, rgba(15,23,42,0.36), rgba(10,10,10,0.92));
+}
+
+.hero .eyebrow{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 14px;
+  border:1px solid rgba(244,180,0,0.22);
+  background:rgba(244,180,0,0.08);
+  color:#fde68a;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(42px, 6vw, 68px);
+  line-height:1.05;
+  max-width:980px;
+  margin-bottom:18px;
+  color:#f4b400;
+  text-wrap:balance;
+}
+
+.hero p{
+  max-width:920px;
+  font-size:clamp(17px, 2vw, 21px);
+  line-height:1.9;
+  color:#d1d5db;
+  margin-bottom:30px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:28px;
+}
+
+.trust-bar{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+  width:min(1100px, 100%);
+  margin-top:34px;
+  padding:0 10px;
+}
+
+.trust-item{
+  background:#141414;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:18px 16px;
+  text-align:left;
+}
+
+.trust-item h4{
+  color:#f4b400;
+  margin-bottom:6px;
+  font-size:16px;
+}
+
+.trust-item p{
+  color:#cbd5e1;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.section{
+  padding:82px 10%;
+}
+
+.section-title{
+  font-size:clamp(32px, 4vw, 46px);
+  color:#f4b400;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.section-subtitle{
+  max-width:920px;
+  margin:0 auto 34px;
+  text-align:center;
+  color:#cbd5e1;
+  line-height:1.9;
+  font-size:17px;
 }
 
 .about{
-padding:80px 10%;
-text-align:center;
-max-width:1100px;
-margin:auto;
-}
-
-.about h2{
-font-size:42px;
-margin-bottom:25px;
-color:#f4b400;
+  max-width:1120px;
+  margin:auto;
 }
 
 .about p{
-font-size:18px;
-line-height:1.9;
+  font-size:18px;
+  line-height:1.95;
+  color:#e5e7eb;
+  text-align:center;
 }
 
 .features{
-padding:80px 10%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:24px;
 }
 
 .card{
-background:#151515;
-padding:30px;
-border-radius:18px;
-transition:0.3s;
+  background:linear-gradient(180deg, #151515, #101010);
+  padding:28px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.25s ease;
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
 }
 
 .card:hover{
-transform:translateY(-8px);
+  transform:translateY(-6px);
+  border-color:rgba(244,180,0,0.22);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#f4b400;
+  margin-bottom:14px;
+  color:#f4b400;
+  font-size:20px;
+}
+
+.card p{
+  color:#d1d5db;
+  line-height:1.75;
+  font-size:15px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:24px;
+  align-items:stretch;
+}
+
+.highlight{
+  background:linear-gradient(135deg, rgba(244,180,0,0.12), rgba(59,130,246,0.10));
+  border:1px solid rgba(255,255,255,0.09);
+  border-radius:24px;
+  padding:28px;
+}
+
+.highlight h3{
+  font-size:24px;
+  color:#ffffff;
+  margin-bottom:12px;
+}
+
+.highlight p{
+  color:#d1d5db;
+  line-height:1.9;
+  font-size:16px;
+}
+
+.list{
+  margin-top:16px;
+  display:grid;
+  gap:12px;
+}
+
+.list-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:14px 16px;
+  color:#e5e7eb;
+  line-height:1.7;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  margin-top:8px;
+  border-radius:999px;
+  background:#f4b400;
+  flex:none;
+  box-shadow:0 0 0 5px rgba(244,180,0,0.08);
 }
 
 .vision{
-padding:80px 10%;
-text-align:center;
-background:#101010;
-}
-
-.vision h2{
-color:#f4b400;
-margin-bottom:20px;
-font-size:40px;
-}
-
-.vision p{
-max-width:900px;
-margin:auto;
-line-height:1.8;
-font-size:18px;
+  background:#101010;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .stats{
-padding:80px 10%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-text-align:center;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
 }
 
 .stat{
-background:#151515;
-padding:25px;
-border-radius:15px;
+  background:#151515;
+  padding:28px 22px;
+  border-radius:18px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .stat h3{
-font-size:36px;
-color:#f4b400;
+  font-size:38px;
+  color:#f4b400;
+  margin-bottom:8px;
+}
+
+.stat p{
+  color:#d1d5db;
+  line-height:1.6;
+  font-size:15px;
+}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.price-card{
+  background:#141414;
+  padding:28px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.price-card.featured{
+  background:linear-gradient(180deg, rgba(244,180,0,0.10), rgba(20,20,20,1));
+  border-color:rgba(244,180,0,0.24);
+}
+
+.price-card h3{
+  color:#fff;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:34px;
+  font-weight:900;
+  color:#f4b400;
+  margin-bottom:14px;
+}
+
+.price-card ul{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin-top:14px;
+}
+
+.price-card li{
+  color:#d1d5db;
+  line-height:1.6;
+  padding-left:18px;
+  position:relative;
+}
+
+.price-card li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#f4b400;
 }
 
 .community{
-padding:80px 10%;
-text-align:center;
+  text-align:center;
 }
 
-.community h2{
-font-size:40px;
-color:#f4b400;
-margin-bottom:20px;
+.newsletter{
+  max-width:760px;
+  margin:0 auto;
+  background:#141414;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:28px;
 }
 
-.community p{
-max-width:900px;
-margin:auto;
-line-height:1.8;
-font-size:18px;
+.newsletter p{
+  color:#d1d5db;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.newsletter-form{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:18px;
+}
+
+input[type="email"]{
+  flex:1 1 280px;
+  min-width:220px;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:#0f172a;
+  color:#fff;
+  outline:none;
+}
+
+input[type="email"]::placeholder{
+  color:#94a3b8;
 }
 
 footer{
-padding:50px;
-text-align:center;
-background:#111;
-margin-top:50px;
+  padding:50px 10%;
+  text-align:center;
+  background:#111;
+  margin-top:60px;
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 footer p{
-margin:10px 0;
+  margin:10px 0;
+  color:#d1d5db;
+  line-height:1.7;
 }
 
+.footer-links{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.footer-links a{
+  color:#f4b400;
+  font-weight:700;
+}
+
+@media (max-width: 768px){
+  header{
+    padding:16px 5%;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  nav{
+    justify-content:center;
+    gap:14px;
+  }
+
+  .nav-actions{
+    margin-left:0;
+  }
+
+  .section{
+    padding:68px 5%;
+  }
+
+  .hero{
+    padding-top:72px;
+    min-height:88vh;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+  <div class="logo">Finance Future</div>
 
-<div class="logo">Finance Future</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#academy">Academy</a>
+    <a href="#marketplace">Marketplace</a>
+    <a href="#community">Community</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Academy</a>
-<a href="#">Marketplace</a>
-<a href="#">Community</a>
-<a href="#">Investing</a>
-<a href="#">Login</a>
-</nav>
-
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="#">Login</a>
+      <a class="btn btn-primary" href="#">Sign Up</a>
+    </div>
+  </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
+  <div class="eyebrow">Premium learning, communication, business and growth</div>
 
-<h1>Learn. Build. Trade. Connect.</h1>
+  <h1>The Future of Learning, Business and Opportunity</h1>
 
-<p>
-Finance Future is a next-generation platform that combines
-entrepreneurship, finance, investing, trading, technology,
-communication, learning, collaboration and digital commerce
-into one powerful ecosystem.
-</p>
+  <p>
+    Finance Future empowers ambitious people to learn valuable skills, build businesses,
+    connect with opportunities, grow wealth, collaborate globally and create a future
+    without limits.
+  </p>
 
-<a href="#" class="btn">Get Started</a>
+  <div class="hero-actions">
+    <a href="#" class="btn btn-primary">Get Started</a>
+    <a href="#" class="btn btn-secondary">Login</a>
+  </div>
 
+  <div class="trust-bar">
+    <div class="trust-item">
+      <h4>Global Communication</h4>
+      <p>Fast messaging and team connection inspired by modern social platforms.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Business Academy</h4>
+      <p>Marketing, entrepreneurship, investing, trading and computer science learning.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Digital Marketplace</h4>
+      <p>Sell files, templates, guides and services inside one creator-friendly system.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Monetization Ready</h4>
+      <p>Designed for memberships, commissions, premium tools and future revenue growth.</p>
+    </div>
+  </div>
 </section>
 
-<section class="about">
-
-<h2>About Finance Future</h2>
-
-<p>
-
-Finance Future is a global platform designed to help
-individuals, entrepreneurs, students, professionals,
-creators and businesses transform knowledge into
-opportunity.
-
-Our mission is to connect learning, communication,
-entrepreneurship, finance, technology and digital commerce
-within a single ecosystem.
-
-Whether you want to learn marketing, master business
-strategy, understand investing, explore trading, develop
-computer science skills, build a startup, collaborate with
-teams or sell digital products, Finance Future provides
-the tools and community to help you grow.
-
-The platform combines advanced learning resources,
-professional networking, real-time communication,
-business communities, digital marketplaces and future
-AI-powered guidance.
-
-Learn. Build. Trade. Connect. Grow.
-
-</p>
-
+<section class="section about" id="about">
+  <h2 class="section-title">The Platform Where Ambition Meets Opportunity</h2>
+  <p>
+    Finance Future is a global platform built for ambitious individuals who want to learn,
+    connect, build, and grow. We bring together business education, entrepreneurship,
+    investing, trading, technology, communication, and digital commerce within a single
+    ecosystem designed for the modern world.
+    <br><br>
+    Whether you're launching a startup, developing professional skills, exploring financial
+    markets, building a personal brand, collaborating with a team, or creating new income
+    opportunities, Finance Future provides the tools, knowledge, and network to help you
+    move forward.
+    <br><br>
+    Our platform combines expert-led learning, real-time communication, professional
+    communities, digital marketplaces, and future AI-powered guidance to help members
+    transform ideas into action. From students and creators to entrepreneurs, investors,
+    and business leaders, Finance Future is designed for people who believe their time,
+    knowledge, and ambition can create something greater.
+    <br><br>
+    Unlike traditional learning platforms, social networks, or business communities,
+    Finance Future unites education, communication, collaboration, and opportunity in one
+    place. Members can gain valuable skills, discover partnerships, share ideas, access
+    resources, participate in thriving communities, and create sustainable paths toward
+    personal and professional success.
+    <br><br>
+    This is more than a website. It is a growing ecosystem of builders, learners, innovators,
+    entrepreneurs, investors, and future leaders working together to unlock opportunities,
+    create value, and shape the future.
+    <br><br>
+    Learn. Build. Trade. Connect. Grow.
+  </p>
 </section>
 
-<section class="features">
+<section class="section" id="academy">
+  <h2 class="section-title">Academy</h2>
+  <p class="section-subtitle">
+    Learn the skills that move people from curiosity to capability, and from capability to income.
+  </p>
+
+  <div class="features">
+    <div class="card">
+      <h3>🎓 Marketing Mastery</h3>
+      <p>Branding, sales, content strategy, ads, funnels and persuasive communication.</p>
+    </div>
+    <div class="card">
+      <h3>💼 Business Builder</h3>
+      <p>Business models, operations, leadership, customer systems and startup growth.</p>
+    </div>
+    <div class="card">
+      <h3>📈 Trading Education</h3>
+      <p>Market structure, risk management, psychology, analysis and discipline.</p>
+    </div>
+    <div class="card">
+      <h3>💻 Computer Science</h3>
+      <p>Coding, automation, product thinking, systems and digital creation.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Founder Skills</h3>
+      <p>Decision-making, productivity, pitching, resilience and scaling with focus.</p>
+    </div>
+    <div class="card">
+      <h3>🏆 Certificates</h3>
+      <p>Progress badges, course completion, skill recognition and learning milestones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section vision">
+  <h2 class="section-title">Why Finance Future?</h2>
+  <p class="section-subtitle">
+    Most platforms solve one problem. Finance Future combines learning, networking,
+    communication, entrepreneurship, trading, investing and digital commerce into one ecosystem.
+  </p>
+
+  <div class="grid-2">
+    <div class="highlight">
+      <h3>Built Like a Premium Finance Platform</h3>
+      <p>
+        The design is meant to feel polished, trustworthy and serious, with a dark premium mood
+        that gives the brand a confident edge.
+      </p>
+      <div class="list">
+        <div class="list-item"><span class="dot"></span><span>Clean interface inspired by modern finance and trading brands.</span></div>
+        <div class="list-item"><span class="dot"></span><span>Simple enough for beginners, deep enough for ambitious builders.</span></div>
+        <div class="list-item"><span class="dot"></span><span>Flexible enough to evolve into a real product ecosystem.</span></div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h3>Global Communication and Community</h3>
+      <p>
+        Finance Future gives people a place to speak, collaborate, share ideas and build together,
+        whether they are learners, founders, creators or teams.
+      </p>
+      <div class="list">
+        <div class="list-item"><span class="dot"></span><span>Fast direct messaging and team collaboration.</span></div>
+        <div class="list-item"><span class="dot"></span><span>Community channels for topics, projects and opportunities.</span></div>
+        <div class="list-item"><span class="dot"></span><span>A living network built for real progress, not passive scrolling.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="marketplace">
+  <h2 class="section-title">Marketplace</h2>
+  <p class="section-subtitle">
+    Create income by buying and selling digital assets, learning resources and professional tools.
+  </p>
+
+  <div class="features">
+    <div class="card">
+      <h3>🛒 Digital Products</h3>
+      <p>Sell eBooks, templates, guides, reports, study packs and business resources.</p>
+    </div>
+    <div class="card">
+      <h3>📦 Downloads</h3>
+      <p>Instant file delivery for buyers who want fast access and clear value.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 Services</h3>
+      <p>Offer consulting, design, development, mentoring and professional support.</p>
+    </div>
+    <div class="card">
+      <h3>⭐ Featured Listings</h3>
+      <p>Premium visibility for creators, businesses and high-value offers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h2 class="section-title">Revenue and Membership Plans</h2>
+  <p class="section-subtitle">
+    A simple structure for growing the platform while giving users real value.
+  </p>
+
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Free</h3>
+      <div class="price">$0</div>
+      <p>For beginners and explorers.</p>
+      <ul>
+        <li>Basic access to learning content</li>
+        <li>Community participation</li>
+        <li>Limited file downloads</li>
+      </ul>
+    </div>
+
+    <div class="price-card featured">
+      <h3>Pro</h3>
+      <div class="price">$9.99</div>
+      <p>For serious learners and builders.</p>
+      <ul>
+        <li>Advanced courses and resources</li>
+        <li>Priority marketplace access</li>
+        <li>Premium community spaces</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <h3>Business</h3>
+      <div class="price">$29.99</div>
+      <p>For teams and entrepreneurs.</p>
+      <ul>
+        <li>Team workspaces</li>
+        <li>Business tools and visibility</li>
+        <li>Higher upload and download limits</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <div class="price">Custom</div>
+      <p>For organizations and partners.</p>
+      <ul>
+        <li>Dedicated support</li>
+        <li>Custom onboarding</li>
+        <li>Advanced platform features</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section vision">
+  <h2 class="section-title">Earn With Finance Future</h2>
+  <p class="section-subtitle">
+    Monetization should be useful, fair and scalable. The platform can earn while creators and users earn too.
+  </p>
+
+  <div class="grid-2">
+    <div class="highlight">
+      <h3>Platform Income Streams</h3>
+      <div class="list">
+        <div class="list-item"><span class="dot"></span><span>Subscriptions and premium memberships</span></div>
+        <div class="list-item"><span class="dot"></span><span>Marketplace commission on digital sales</span></div>
+        <div class="list-item"><span class="dot"></span><span>Featured creator and business listings</span></div>
+        <div class="list-item"><span class="dot"></span><span>Enterprise accounts and team tools</span></div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h3>Value for Users</h3>
+      <div class="list">
+        <div class="list-item"><span class="dot"></span><span>Skill growth through practical learning</span></div>
+        <div class="list-item"><span class="dot"></span><span>Income opportunities through files and services</span></div>
+        <div class="list-item"><span class="dot"></span><span>Community support and collaboration</span></div>
+        <div class="list-item"><span class="dot"></span><span>Tools for business, productivity and expansion</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="community">
+  <h2 class="section-title">Finance Future Community</h2>
+  <p class="section-subtitle">
+    Join ambitious entrepreneurs, traders, developers, students, creators and professionals from around the world.
+  </p>
+
+  <div class="community">
+    <div class="newsletter">
+      <h3 style="color:#f4b400;font-size:24px;margin-bottom:10px;">Stay connected</h3>
+      <p>
+        Get updates on learning content, tools, marketplace launches and future platform features.
+      </p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address">
+        <a href="#" class="btn btn-primary">Join Newsletter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Our Vision</h2>
+  <p class="section-subtitle">
+    To become a leading platform for learning, entrepreneurship, collaboration,
+    financial education and digital opportunity, helping people unlock potential and build meaningful futures.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>100+</h3>
+      <p>Future Courses</p>
+    </div>
+    <div class="stat">
+      <h3>50+</h3>
+      <p>Business Communities</p>
+    </div>
+    <div class="stat">
+      <h3>24/7</h3>
+      <p>Global Connectivity</p>
+    </div>
+    <div class="stat">
+      <h3>∞</h3>
+      <p>Growth Potential</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+
+<h2 class="section-title">Success Stories</h2>
+
+<p class="section-subtitle">
+People use Finance Future to learn, connect, grow and create opportunities.
+</p>
+
+<div class="features">
 
 <div class="card">
-<h3>🎓 Academy</h3>
+<h3>🚀 Startup Founder</h3>
 <p>
-Business, Marketing, Entrepreneurship,
-Trading and Computer Science education.
+"Finance Future helped me connect with talented people and learn the skills needed to launch my first business."
 </p>
 </div>
 
 <div class="card">
-<h3>💬 Communication</h3>
+<h3>📈 Trader</h3>
 <p>
-Fast messaging inspired by WhatsApp
-for teams, communities and businesses.
+"The trading and investing resources gave me a structured way to improve my knowledge and confidence."
 </p>
 </div>
 
 <div class="card">
-<h3>🌐 Communities</h3>
+<h3>💻 Developer</h3>
 <p>
-Discord-style channels for collaboration,
-learning and networking.
+"The technology and business content helped me combine coding skills with entrepreneurship."
 </p>
 </div>
 
-<div class="card">
-<h3>💼 Marketplace</h3>
-<p>
-Buy and sell digital products,
-templates, files and services.
-</p>
-</div>
-
-<div class="card">
-<h3>📈 Investing Hub</h3>
-<p>
-Learn investing, markets,
-wealth creation and finance.
-</p>
-</div>
-
-<div class="card">
-<h3>🤖 AI Mentor</h3>
-<p>
-Future AI assistant for business,
-coding, productivity and growth.
-</p>
 </div>
 
 </section>
+  <section class="section vision">
 
-<section class="vision">
+<h2 class="section-title">Finance Future Roadmap</h2>
 
-<h2>Our Vision</h2>
-
-<p>
-To become the world's leading platform for
-learning, entrepreneurship, collaboration,
-financial education and digital opportunity,
-helping millions of people unlock their
-potential and build meaningful futures.
-</p>
-
-</section>
-
-<section class="stats">
+<div class="stats">
 
 <div class="stat">
-<h3>100+</h3>
-<p>Future Courses</p>
+<h3>V1</h3>
+<p>Homepage Launch</p>
 </div>
 
 <div class="stat">
-<h3>50+</h3>
-<p>Business Communities</p>
+<h3>V2</h3>
+<p>Academy & Courses</p>
 </div>
 
 <div class="stat">
-<h3>24/7</h3>
-<p>Global Connectivity</p>
+<h3>V3</h3>
+<p>Marketplace & Downloads</p>
 </div>
 
 <div class="stat">
-<h3>∞</h3>
-<p>Growth Potential</p>
+<h3>V4</h3>
+<p>Messaging & Communities</p>
 </div>
 
-</section>
+<div class="stat">
+<h3>V5</h3>
+<p>AI Assistant</p>
+</div>
 
-<section class="community">
+<div class="stat">
+<h3>V6</h3>
+<p>Mobile App</p>
+</div>
 
-<h2>Finance Future Community</h2>
+</div>
 
+  </section>
+  <section class="section">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>What is Finance Future?</h3>
 <p>
-Join ambitious entrepreneurs, traders,
-developers, students, creators and
-professionals from around the world.
+Finance Future is a platform that combines learning, entrepreneurship, communication, investing and digital commerce.
+</p>
+</div>
 
-Build relationships, learn new skills,
-discover opportunities and create
-your future together.
+<div class="card">
+<h3>Can I earn money on Finance Future?</h3>
+<p>
+Yes. Future features include selling digital products, offering services and participating in the marketplace.
+</p>
+</div>
+
+<div class="card">
+<h3>Who is Finance Future for?</h3>
+<p>
+Students, entrepreneurs, creators, professionals, investors and anyone interested in personal growth.
+</p>
+</div>
+
+<div class="card">
+<h3>Will there be mobile apps?</h3>
+<p>
+Yes. Mobile applications are planned as part of the platform roadmap.
+</p>
+</div>
+
+</div>
+
+  </section>
+  <section class="section">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p class="section-subtitle">
+Questions, partnerships or business inquiries? We'd love to hear from you.
 </p>
 
-</section>
+<div class="newsletter">
 
+<p>Email: contact@financefuture.com</p>
+
+<p>Partnerships: partners@financefuture.com</p>
+
+<p>Support: support@financefuture.com</p>
+
+</div>
+
+  </section>
+  <section class="section vision">
+
+<h2 class="section-title">
+Ready To Build Your Future?
+</h2>
+
+<p class="section-subtitle">
+Join a growing community of learners, entrepreneurs, creators and innovators building opportunities together.
+</p>
+
+<div style="text-align:center;">
+<a href="#" class="btn btn-primary">Get Started Today</a>
+</div>
+
+  </section>
 <footer>
+  <p>© 2026 Finance Future</p>
+  <p>Learn • Build • Trade • Connect • Grow</p>
+  <p>Business • Technology • Investing • Trading • Entrepreneurship • Community</p>
 
-<p>© 2026 Finance Future</p>
-
-<p>
-Business • Technology • Trading • Learning • Community
-</p>
-
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+  </div>
 </footer>
 
 </body>

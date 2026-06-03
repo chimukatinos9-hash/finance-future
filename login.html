@@ -6,51 +6,79 @@
 <title>Finance Future Login</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
 background:#0a0a0a;
 color:white;
-font-family:Arial,sans-serif;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-margin:0;
+min-height:100vh;
+padding:20px;
 }
 
 .login-box{
 background:#151515;
 padding:40px;
 border-radius:20px;
-width:350px;
+width:100%;
+max-width:400px;
 text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 h1{
 color:#f4b400;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 input{
 width:100%;
-padding:12px;
+padding:14px;
 margin:10px 0;
 border:none;
-border-radius:10px;
+border-radius:12px;
+background:#222;
+color:white;
+font-size:15px;
+}
+
+input:focus{
+outline:2px solid #f4b400;
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 background:#f4b400;
-border:none;
-border-radius:10px;
+color:black;
 font-weight:bold;
+border:none;
+border-radius:12px;
 cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+opacity:0.9;
 }
 
 a{
 color:#f4b400;
 text-decoration:none;
+}
+
+.footer-text{
+margin-top:20px;
+font-size:13px;
+color:#888;
 }
 </style>
 </head>
@@ -61,11 +89,32 @@ text-decoration:none;
 
 <h1>Finance Future</h1>
 
-<input type="email" placeholder="Email">
+<div style="
+background:rgba(244,180,0,0.12);
+border:1px solid rgba(244,180,0,0.3);
+padding:12px;
+border-radius:12px;
+text-align:center;
+margin-bottom:20px;
+color:#f4b400;
+font-weight:bold;
+">
+🔐 Welcome Back
+</div>
 
-<input type="password" placeholder="Password">
+<p style="
+color:#ccc;
+margin-bottom:20px;
+line-height:1.6;
+">
+Login to continue learning, building, trading and growing.
+</p>
 
-<button>Login</button>
+<input type="email" placeholder="Email Address" required>
+
+<input type="password" placeholder="Password" required>
+
+<button>🚀 Login to Finance Future</button>
 
 <p style="margin-top:15px;">
 <a href="#">Forgot Password?</a>
@@ -75,6 +124,14 @@ text-decoration:none;
 Don't have an account?
 <a href="signup.html">Sign Up</a>
 </p>
+
+<p style="margin-top:10px;">
+<a href="index.html">← Back to Home</a>
+</p>
+
+<div class="footer-text">
+Finance Future © 2026
+</div>
 
 </div>
 

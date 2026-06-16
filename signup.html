@@ -185,6 +185,29 @@ Finance Future © 2026
 </div>
 
 </div>
+<script type="module">
+import { auth } from "./firebase.js";
+import {
+  createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = form.querySelector('input[type="email"]').value;
+  const password = form.querySelectorAll('input[type="password"]')[0].value;
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+
+    alert("Account created successfully!");
+    window.location.href = "dashboard.html";
+  } catch (error) {
+    alert(error.message);
+  }
+});
+</script>
 </body>
 </html>
